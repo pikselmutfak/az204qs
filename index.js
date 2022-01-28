@@ -1,7 +1,7 @@
 const { QueueServiceClient } = require("@azure/storage-queue");
 
 const queueServiceClient = QueueServiceClient.fromConnectionString(
-    'DefaultEndpointsProtocol=https;AccountName=storageke;AccountKey=PFGwLgl+3214CFk8CigRz/wLdCs37VyoupaJQPHQb+hifpN2vcrQX2428VPpj9olSTM/78Gj/s4wXjUmvV7UJw==;EndpointSuffix=core.windows.net'
+    ''
 );
 
 const receiveMessages = async () => {
@@ -15,6 +15,4 @@ const receiveMessages = async () => {
     })
 }
 
-setInterval(() => {
-    receiveMessages()
-}, 2000)
+receiveMessages()
